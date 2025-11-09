@@ -68,6 +68,11 @@
     SECTION RAW = Binaries/moonstone/RawFiles/Panel_k6s_38_0c_0a_fhdp_dsc_vid.xml
   }
 
+  FILE FREEFORM = 9DBE6267-8EFC-483D-B4BE-89DB5B6F2578 {
+    SECTION UI = "Panel_k6s_38_0c_0a_fhdp_dsc_vid.xml"
+    SECTION RAW = Binaries/moonstone/RawFiles/Panel_k6s_38_0c_0a_fhdp_dsc_vid.xml
+  }
+
   FILE FREEFORM = A1E235DE-E825-4591-9623-C43175811826 {
     SECTION UI = "SecParti.cfg"
     SECTION RAW = Binaries/moonstone/RawFiles/SecParti.cfg
