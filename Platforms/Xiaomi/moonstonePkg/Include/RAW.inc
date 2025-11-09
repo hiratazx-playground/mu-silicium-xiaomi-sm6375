@@ -63,7 +63,7 @@
     SECTION RAW = Binaries/moonstone/RawFiles/Panel_nt36672e_fhd_plus_144hz_vid_cphy.xml
   }
 
-  FILE FREEFORM = FF77129B-44E1-4736-8C95-539F7207CD48 {
+  FILE FREEFORM = B72827B9-677F-40EB-8368-A23DF6EE309F {
     SECTION UI = "Panel_m17_38_0c_0a_fhdp_dsc_vid.xml"
     SECTION RAW = Binaries/moonstone/RawFiles/Panel_m17_38_0c_0a_fhdp_dsc_vid.xml
   }
