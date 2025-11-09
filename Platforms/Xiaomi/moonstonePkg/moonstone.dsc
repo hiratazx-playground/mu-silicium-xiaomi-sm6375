@@ -14,16 +14,16 @@
 #
 ################################################################################
 [Defines]
-  PLATFORM_NAME                  = moonstone
-  PLATFORM_GUID                  = 3FAE1F62-E8F6-45A8-BFF8-B9F7FD3121D4
-  PLATFORM_VERSION               = 0.1
-  DSC_SPECIFICATION              = 0x00010005
-  OUTPUT_DIRECTORY               = Build/moonstonePkg
-  SUPPORTED_ARCHITECTURES        = AARCH64
-  BUILD_TARGETS                  = RELEASE|DEBUG
-  SKUID_IDENTIFIER               = DEFAULT
-  FLASH_DEFINITION               = moonstonePkg/moonstone.fdf
-  USE_CUSTOM_DISPLAY_DRIVER      = 0
+  PLATFORM_NAME                = moonstone
+  PLATFORM_GUID                = 3FAE1F62-E8F6-45A8-BFF8-B9F7FD3121D4
+  PLATFORM_VERSION             = 0.1
+  DSC_SPECIFICATION            = 0x00010005
+  OUTPUT_DIRECTORY             = Build/moonstonePkg
+  SUPPORTED_ARCHITECTURES      = AARCH64
+  BUILD_TARGETS                = RELEASE|DEBUG
+  SKUID_IDENTIFIER             = DEFAULT
+  FLASH_DEFINITION             = moonstonePkg/moonstone.fdf
+  USE_CUSTOM_DISPLAY_DRIVER    = 0
 
 [PcdsFixedAtBuild]
   # DDR Start Address
@@ -32,6 +32,11 @@
   # UEFI Stack Addresses
   gEmbeddedTokenSpaceGuid.PcdPrePiStackBase|0x9FF90000
   gEmbeddedTokenSpaceGuid.PcdPrePiStackSize|0x00040000
+
+  # CPU Vector Address
+  gArmTokenSpaceGuid.PcdCpuVectorBaseAddress|0x9FF8C000
+
+  gSiliciumPkgTokenSpaceGuid.PcdDeviceMaintainer|"hiratazx"
 
   # Device GUID
   gSiliciumPkgTokenSpaceGuid.PcdDeviceGuid|{ 0x62, 0x1F, 0xAE, 0x3F, 0xF6, 0xE8, 0xA8, 0x45, 0xBF, 0xF8, 0xB9, 0xF7, 0xFD, 0x31, 0x21, 0xD4 }
@@ -61,5 +66,15 @@
   MemoryMapLib|moonstonePkg/Library/MemoryMapLib/MemoryMapLib.inf
   ConfigurationMapLib|moonstonePkg/Library/ConfigurationMapLib/ConfigurationMapLib.inf
   AcpiDeviceUpdateLib|SiliciumPkg/Library/AcpiDeviceUpdateLibNull/AcpiDeviceUpdateLibNull.inf
+
+[PcdsDynamicDefault]
+  gEfiMdeModulePkgTokenSpaceGuid.PcdVideoHorizontalResolution|1080
+  gEfiMdeModulePkgTokenSpaceGuid.PcdVideoVerticalResolution|2400
+  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupVideoHorizontalResolution|1080
+  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupVideoVerticalResolution|2400
+  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupConOutColumn|135
+  gEfiMdeModulePkgTokenSpaceGuid.PcdSetupConOutRow|126
+  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutColumn|135
+  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutRow|126
 
 !include StraitPkg/StraitPkg.dsc.inc
