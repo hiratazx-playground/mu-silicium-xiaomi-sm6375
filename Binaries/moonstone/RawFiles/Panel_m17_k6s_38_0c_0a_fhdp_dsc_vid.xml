@@ -1,5 +1,5 @@
 <?xml version=\"1.0\" encoding=\"utf-8\"?>
-<PanelDescription>xiaomi k6 38 0c 0a Single DSI Video Mode Panel (1080x2400 24bpp)</PanelDescription>
+<PanelDescription>xiaomi m17 38 0c 0a Single DSI Video Mode Panel (1080x2400 24bpp)</PanelDescription>
 <Group id=\"Active Timing\">
  <HorizontalActive>1080</HorizontalActive>
  <HorizontalFrontPorch>120</HorizontalFrontPorch>
@@ -97,12 +97,6 @@ FF 14
 39 FC A5 A5
 39 53 20
 39 51 07 FF
-39 F0 5A 5A
-39 B0 00 01 B1
-39 B1 C9 00 00 16 CC 02 07 0B B5 21 EF DE E5 0D D3 EE DF 02 FF FF FF
-39 80 05
-39 B1 00
-39 F0 A5 A5
 FF 64
 05 29
 </DSIInitSequence>
@@ -119,3 +113,4 @@ FF 64
  <BacklightDefault>11</BacklightDefault>
  <DisplayResetInfo>0 10000 10000 10000 0</DisplayResetInfo>
 </Group>
+
